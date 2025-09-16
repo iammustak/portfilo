@@ -12,23 +12,17 @@ import {
 } from "lucide-react";
 
 // Correct imports from src/assets
-import profilePhoto from "./assets/image/image_1.jpeg";
-import gfg from "./assets/image/image_2.jpg";
+import profilePhoto from "../public/assets/image/image_1.jpg";
+import gfg from "../public/assets/image/image_2.jpg";
 
-// Videos
-import cinematicVideo from "./assets/video/video_1.mp4";
-import eventVideo from "./assets/video/video_2.mp4";
-import coverSongVideo from "./assets/video/video_3.mp4";
-import reelVideo from "./assets/video/video_4.mp4";
 
 function App() {
   const [count, setCount] = useState(0);
 
   const portfolioProjects = [
-    { title: "Cinematic Video Edits", desc: "Short films with cinematic effects.", video: cinematicVideo },
-    { title: "Event Video", desc: "Event highlights and promo edits.", video: eventVideo },
-    { title: "Music Video", desc: "Cinematic cover song edits.", video: coverSongVideo },
-    { title: "Portrait Photography", desc: "Compelling portraits with lighting.", video: reelVideo },
+    { title: "Cinematic Video Edits", desc: "Short films with cinematic effects.", video: "https://res.cloudinary.com/dxpitnkmt/video/upload/v1758024232/1751269638479269_ykqsgt.mp4"},
+    { title: "Music Video", desc: "Cinematic cover song edits.", video: "https://res.cloudinary.com/dxpitnkmt/video/upload/v1758023958/_Tum_Hi_Aana_cover_song_1080p_cm1arx.mp4" },
+    { title: "Event video", desc: "Compelling portraits with lighting.", video: "https://res.cloudinary.com/dxpitnkmt/video/upload/v1758023965/0205_1_c7moge.mov" },
     { title: "Event Photography", desc: "Dynamic event coverage.", img: gfg },
     { title: "Product Photography", desc: "E-commerce product shots.", img: "https://placehold.co/600x400/111827/818cf8?text=Product+Photo" },
   ];
