@@ -11,7 +11,7 @@ import {
   Phone,
 } from "lucide-react";
 
-// Updated imports from src/assets
+// Correct imports from src/assets
 import profilePhoto from "./assets/image/image_1.jpeg";
 import gfg from "./assets/image/image_2.jpg";
 
@@ -24,26 +24,31 @@ import reelVideo from "./assets/video/video_4.mp4";
 function App() {
   const [count, setCount] = useState(0);
 
+  const portfolioProjects = [
+    { title: "Cinematic Video Edits", desc: "Short films with cinematic effects.", video: cinematicVideo },
+    { title: "Event Video", desc: "Event highlights and promo edits.", video: eventVideo },
+    { title: "Music Video", desc: "Cinematic cover song edits.", video: coverSongVideo },
+    { title: "Portrait Photography", desc: "Compelling portraits with lighting.", video: reelVideo },
+    { title: "Event Photography", desc: "Dynamic event coverage.", img: gfg },
+    { title: "Product Photography", desc: "E-commerce product shots.", img: "https://placehold.co/600x400/111827/818cf8?text=Product+Photo" },
+  ];
+
   return (
     <div className="antialiased bg-gray-950 text-gray-200">
       {/* Header */}
       <header className="fixed top-0 left-0 right-0 z-50 bg-gray-900/90 backdrop-blur-md">
         <div className="container mx-auto px-6 py-4 flex justify-between items-center">
-          <a href="#" className="text-2xl font-bold gradient-text">
-            Mustak.
-          </a>
+          <a href="#" className="text-2xl font-bold gradient-text">Mustak.</a>
           <nav className="hidden md:flex space-x-8">
-            {["About", "Skills", "Portfolio", "Experience", "Contact"].map(
-              (item) => (
-                <a
-                  key={item}
-                  href={`#${item.toLowerCase()}`}
-                  className="text-gray-300 hover:text-sky-400 transition-colors"
-                >
-                  {item}
-                </a>
-              )
-            )}
+            {["About", "Skills", "Portfolio", "Experience", "Contact"].map((item) => (
+              <a
+                key={item}
+                href={`#${item.toLowerCase()}`}
+                className="text-gray-300 hover:text-sky-400 transition-colors"
+              >
+                {item}
+              </a>
+            ))}
           </nav>
           <a
             href="mailto:mdmustak01@icloud.com"
@@ -64,15 +69,12 @@ function App() {
           }}
         >
           <div className="container mx-auto px-6 text-center">
-            <h1 className="text-4xl md:text-6xl font-bold text-white leading-tight">
-              Md Mustak Alam
-            </h1>
+            <h1 className="text-4xl md:text-6xl font-bold text-white leading-tight">Md Mustak Alam</h1>
             <p className="mt-4 text-xl md:text-2xl font-light gradient-text">
               Video Editor, Photographer & Poster Designer
             </p>
             <p className="mt-6 max-w-3xl mx-auto text-gray-300">
-              Creative and detail-oriented visual storyteller. Let's create
-              something amazing together.
+              Creative and detail-oriented visual storyteller. Let's create something amazing together.
             </p>
             <div className="mt-10 flex justify-center flex-wrap gap-4">
               <a
@@ -94,9 +96,7 @@ function App() {
         {/* About Section */}
         <section id="about" className="py-20">
           <div className="container mx-auto px-6">
-            <h2 className="text-4xl font-bold text-center mb-12 section-title">
-              About Me
-            </h2>
+            <h2 className="text-4xl font-bold text-center mb-12 section-title">About Me</h2>
             <div className="flex flex-col md:flex-row items-center gap-12">
               <div className="md:w-1/3 flex justify-center">
                 <img
@@ -107,13 +107,10 @@ function App() {
               </div>
               <div className="md:w-2/3 text-center md:text-left">
                 <p className="text-lg text-gray-300 mb-4">
-                  I am a creative and detail-oriented Video Editor and Poster
-                  Designer with professional experience and technical knowledge.
+                  I am a creative and detail-oriented Video Editor and Poster Designer with professional experience and technical knowledge.
                 </p>
                 <p className="text-lg text-gray-300 mb-6">
-                  I bring ideas to life through cinematic edits, reels, and
-                  posters. Managed media for brands like GeeksforGeeks and 100+
-                  freelance projects.
+                  I bring ideas to life through cinematic edits, reels, and posters. Managed media for brands like GeeksforGeeks and 100+ freelance projects.
                 </p>
                 <div className="flex items-center justify-center md:justify-start gap-3 text-gray-300">
                   <MapPin className="w-6 h-6" />
@@ -127,17 +124,12 @@ function App() {
         {/* Skills Section */}
         <section id="skills" className="py-20 bg-gray-900">
           <div className="container mx-auto px-6">
-            <h2 className="text-4xl font-bold text-center mb-12 section-title">
-              My Skills
-            </h2>
+            <h2 className="text-4xl font-bold text-center mb-12 section-title">My Skills</h2>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {/* Skill cards */}
               <div className="skill-card p-8 rounded-lg bg-gray-800 border border-gray-700">
                 <div className="flex items-center mb-4">
                   <Film className="text-sky-400 w-10 h-10" />
-                  <h3 className="ml-4 text-2xl font-semibold text-white">
-                    Video Editing
-                  </h3>
+                  <h3 className="ml-4 text-2xl font-semibold text-white">Video Editing</h3>
                 </div>
                 <ul className="list-disc list-inside text-gray-300 space-y-2">
                   <li>Final Cut Pro</li>
@@ -152,9 +144,7 @@ function App() {
               <div className="skill-card p-8 rounded-lg bg-gray-800 border border-gray-700">
                 <div className="flex items-center mb-4">
                   <Palette className="text-sky-400 w-10 h-10" />
-                  <h3 className="ml-4 text-2xl font-semibold text-white">
-                    Design & Posters
-                  </h3>
+                  <h3 className="ml-4 text-2xl font-semibold text-white">Design & Posters</h3>
                 </div>
                 <ul className="list-disc list-inside text-gray-300 space-y-2">
                   <li>Canva</li>
@@ -168,9 +158,7 @@ function App() {
               <div className="skill-card p-8 rounded-lg bg-gray-800 border border-gray-700">
                 <div className="flex items-center mb-4">
                   <Share2 className="text-sky-400 w-10 h-10" />
-                  <h3 className="ml-4 text-2xl font-semibold text-white">
-                    Content & Media
-                  </h3>
+                  <h3 className="ml-4 text-2xl font-semibold text-white">Content & Media</h3>
                 </div>
                 <ul className="list-disc list-inside text-gray-300 space-y-2">
                   <li>Reels/Shorts Creation</li>
@@ -187,18 +175,9 @@ function App() {
         {/* Portfolio Section */}
         <section id="portfolio" className="py-20">
           <div className="container mx-auto px-6">
-            <h2 className="text-4xl font-bold text-center mb-12 section-title">
-              Portfolio
-            </h2>
+            <h2 className="text-4xl font-bold text-center mb-12 section-title">Portfolio</h2>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {[
-                { title: "Cinematic Video Edits", desc: "Short films with cinematic effects.", video: cinematicVideo },
-                { title: "Event Video", desc: "Event highlights and promo edits.", video: eventVideo },
-                { title: "Music Video", desc: "Cinematic cover song edits.", video: coverSongVideo },
-                { title: "Portrait Photography", desc: "Compelling portraits with lighting.", video: reelVideo },
-                { title: "Event Photography", desc: "Dynamic event coverage.", img: gfg },
-                { title: "Product Photography", desc: "E-commerce product shots.", img: "https://placehold.co/600x400/111827/818cf8?text=Product+Photo" },
-              ].map((proj, idx) => (
+              {portfolioProjects.map((proj, idx) => (
                 <div key={idx} className="project-card rounded-lg overflow-hidden shadow-lg hover:shadow-2xl transition-all">
                   {proj.video ? (
                     <video className="w-full h-60 object-cover" controls>
@@ -259,8 +238,7 @@ function App() {
           <div className="container mx-auto px-6 text-center">
             <h2 className="text-4xl font-bold mb-4 section-title">Let's Connect</h2>
             <p className="max-w-2xl mx-auto text-gray-300 mb-8">
-              I'm currently available for freelance projects and new opportunities.  
-              If you have a project in mind or just want to say hello, feel free to reach out!
+              I'm currently available for freelance projects and new opportunities. If you have a project in mind or just want to say hello, feel free to reach out!
             </p>
             <a
               href="mailto:mdmustak01@icloud.com"
