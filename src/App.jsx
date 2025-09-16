@@ -11,15 +11,15 @@ import {
   Phone,
 } from "lucide-react";
 
-// Import assets directly (deployment-proof)
-import profilePhoto from "./image/image_1.jpeg";
-import gfg from "./image/image_2.jpg";
+// Updated imports from src/assets
+import profilePhoto from "./assets/image/image_1.jpeg";
+import gfg from "./assets/image/image_2.jpg";
 
 // Videos
-import cinematicVideo from "./video/video_1.mp4";
-import eventVideo from "./video/video_2.mp4";
-import coverSongVideo from "./video/video_3.mp4";
-import reelVideo from "./video/video_4.mp4";
+import cinematicVideo from "./assets/video/video_1.mp4";
+import eventVideo from "./assets/video/video_2.mp4";
+import coverSongVideo from "./assets/video/video_3.mp4";
+import reelVideo from "./assets/video/video_4.mp4";
 
 function App() {
   const [count, setCount] = useState(0);
