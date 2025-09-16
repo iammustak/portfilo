@@ -1,13 +1,6 @@
 import { useState } from "react";
 import "./App.css";
 
-import  profilephoto from "./assets/image/76190458-FBC4-4654-85F7-C0930F08192F_1_105_c.jpeg";
-import cinematicVideo from "./assets/video/0205 (1).mp4";
-import gfg from "./assets/image/Geeks for Geeks Team.jpg"
-import eventVideo from "./assets/video/1751269638479269.mp4";
-import coverSongVideo from "./assets/video/_Tum Hi Aana cover song 1080p.mp4";
-import reelVideo from "./assets/video/reel (2).mp4";
-
 import {
   Film,
   Palette,
@@ -17,6 +10,15 @@ import {
   Instagram,
   Phone,
 } from "lucide-react";
+
+// Images and videos from public folder
+const profilePhoto = "/image/76190458-FBC4-4654-85F7-C0930F08192F_1_105_c.jpeg";
+const gfg = "/image/Geeks for Geeks Team.jpg";
+
+const cinematicVideo = "/video/0205 (1).mp4";
+const eventVideo = "/video/1751269638479269.mp4";
+const coverSongVideo = "/video/_Tum Hi Aana cover song 1080p.mp4";
+const reelVideo = "/video/reel (2).mp4";
 
 function App() {
   const [count, setCount] = useState(0);
@@ -57,7 +59,7 @@ function App() {
           id="hero"
           className="min-h-screen flex items-center bg-cover bg-center relative"
           style={{
-            backgroundImage: `linear-gradient(rgba(17,24,39,0.7), rgba(17,24,39,0.9)), url(${profilephoto})`,
+            backgroundImage: `linear-gradient(rgba(17,24,39,0.7), rgba(17,24,39,0.9)), url(${profilePhoto})`,
           }}
         >
           <div className="container mx-auto px-6 text-center">
@@ -97,7 +99,7 @@ function App() {
             <div className="flex flex-col md:flex-row items-center gap-12">
               <div className="md:w-1/3 flex justify-center">
                 <img
-                  src={profilephoto}
+                  src={profilePhoto}
                   alt="Md Mustak Alam"
                   className="rounded-full shadow-lg border-4 border-sky-500 w-64 h-64 object-cover"
                 />
