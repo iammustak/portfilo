@@ -11,7 +11,7 @@ import {
   Phone,
 } from "lucide-react";
 
-// Images
+// Public folder assets (use root-relative paths)
 const profilePhoto = "/image/image_1.jpeg";
 const gfg = "/image/image_2.jpg";
 
@@ -20,7 +20,6 @@ const cinematicVideo = "/video/video_1.mp4";
 const eventVideo = "/video/video_2.mp4";
 const coverSongVideo = "/video/video_3.mp4";
 const reelVideo = "/video/video_4.mp4";
-
 
 function App() {
   const [count, setCount] = useState(0);
@@ -132,7 +131,7 @@ function App() {
               My Skills
             </h2>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {/* skills list same as before */}
+              {/* skills list */}
             </div>
           </div>
         </section>
@@ -204,8 +203,6 @@ function App() {
             </div>
           </div>
         </section>
-
-        {/* Experience + Contact + Footer remain unchanged */}
       </main>
     </div>
   );
