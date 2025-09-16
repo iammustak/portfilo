@@ -11,14 +11,16 @@ import {
   Phone,
 } from "lucide-react";
 
-// ✅ Images and videos from public folder
-const profilePhoto = "/image/76190458-FBC4-4654-85F7-C0930F08192F_1_105_c.jpeg";
-const gfg = "/image/Geeks for Geeks Team.jpg";
+// Images
+const profilePhoto = "/image/image_1.jpeg";
+const gfg = "/image/image_2.jpg";
 
-const cinematicVideo = "/video/0205 (1).mp4";
-const eventVideo = "/video/1751269638479269.mp4";
-const coverSongVideo = "/video/_Tum Hi Aana cover song 1080p.mp4";
-const reelVideo = "/video/reel (2).mp4";
+// Videos
+const cinematicVideo = "/video/video_1.mp4";
+const eventVideo = "/video/video_2.mp4";
+const coverSongVideo = "/video/video_3.mp4";
+const reelVideo = "/video/video_4.mp4";
+
 
 function App() {
   const [count, setCount] = useState(0);
