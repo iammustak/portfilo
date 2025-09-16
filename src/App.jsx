@@ -11,15 +11,15 @@ import {
   Phone,
 } from "lucide-react";
 
-// Public folder assets (root-relative paths)
-const profilePhoto = "/image/image_1.jpeg";
-const gfg = "/image/image_2.jpg";
+// Import assets directly (deployment-proof)
+import profilePhoto from "./image/image_1.jpeg";
+import gfg from "./image/image_2.jpg";
 
 // Videos
-const cinematicVideo = "/video/video_1.mp4";
-const eventVideo = "/video/video_2.mp4";
-const coverSongVideo = "/video/video_3.mp4";
-const reelVideo = "/video/video_4.mp4";
+import cinematicVideo from "./video/video_1.mp4";
+import eventVideo from "./video/video_2.mp4";
+import coverSongVideo from "./video/video_3.mp4";
+import reelVideo from "./video/video_4.mp4";
 
 function App() {
   const [count, setCount] = useState(0);
@@ -131,6 +131,7 @@ function App() {
               My Skills
             </h2>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {/* Skill cards */}
               <div className="skill-card p-8 rounded-lg bg-gray-800 border border-gray-700">
                 <div className="flex items-center mb-4">
                   <Film className="text-sky-400 w-10 h-10" />
@@ -200,7 +201,9 @@ function App() {
               ].map((proj, idx) => (
                 <div key={idx} className="project-card rounded-lg overflow-hidden shadow-lg hover:shadow-2xl transition-all">
                   {proj.video ? (
-                    <video className="w-full h-60 object-cover" controls src={proj.video} />
+                    <video className="w-full h-60 object-cover" controls>
+                      <source src={proj.video} type="video/mp4" />
+                    </video>
                   ) : (
                     <img src={proj.img} alt={proj.title} className="w-full h-60 object-cover" />
                   )}
